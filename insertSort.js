@@ -4,7 +4,7 @@
 var a = [1, 2, 8, 9, 2, 3, 6, 5, 4];
 var n = a.length;
 console.log('原来的数组' + a.map((i) => i));
-insertSort(a, n)
+a = insertSort(a, n)
 console.log('排序后的数组' + a.map((i) => i));
 
 function insertSort(a, n) {
@@ -23,4 +23,5 @@ function insertSort(a, n) {
             a[k+1]=temp;
         }
     }
+    return a;
 }
