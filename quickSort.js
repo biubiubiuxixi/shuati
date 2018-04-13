@@ -15,10 +15,10 @@ function quickSort(arr) {
     let right = [];
     let left = [];
     for (let i=0;i<arr.length;i++) {
-        if(arr[i]>nValue) {
-            right.push(arr[i]);
-        } else {
+        if(arr[i]<nValue) {
             left.push(arr[i]);
+        } else {
+            right.push(arr[i]);
         }
     }
     return quickSort(left).concat(quickSort(right));
