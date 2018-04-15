@@ -11,7 +11,7 @@ function quickSort(arr) {
         return arr;
     }
     let n = Math.floor(arr.length/2);
-    let nValue = arr[n];
+    let nValue = arr.splice(n, 1)[0];
     let right = [];
     let left = [];
     for (let i=0;i<arr.length;i++) {
@@ -21,5 +21,5 @@ function quickSort(arr) {
             right.push(arr[i]);
         }
     }
-    return quickSort(left).concat(quickSort(right));
+    return quickSort(left).concat(nValue, quickSort(right));
 }
